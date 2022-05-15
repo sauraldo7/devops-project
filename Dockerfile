@@ -1,11 +1,5 @@
-FROM centos:7
-
-MAINTAINER Bangmetric pvt. ltd.
-
-RUN apt-get install apache2 -y
-
+FROM    centos:7
+RUN yum update -y && yum install httpd httpd-tools -y
 COPY index.html /var/www/html/
-
-CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
-
-EXPOSE 80
+EXPOSE  80
+CMD     ["/usr/sbin/httpd","-D","FOREGROUND"]
