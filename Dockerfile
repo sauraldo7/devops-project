@@ -2,7 +2,7 @@ FROM centos:7
 
 MAINTAINER Bangmetric pvt. ltd.
 
-RUN yum -y install httpd
+RUN sudo apt install httpd -y
 
 COPY index.html /var/www/html/
 
