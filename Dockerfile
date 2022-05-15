@@ -2,7 +2,7 @@ FROM centos:7
 
 MAINTAINER Bangmetric pvt. ltd.
 
-RUN apt install apache2 -y
+RUN apt-get install apache2 -y
 
 COPY index.html /var/www/html/
 
